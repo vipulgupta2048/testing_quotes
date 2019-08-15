@@ -1,5 +1,4 @@
 from spider_test.items import TestItem1, TestItem2
-
 BOT_NAME = "spider_test"
 
 SPIDER_MODULES = ["spider_test.spiders"]
