@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from spider_test.items import TestItem1, TestItem2
+# from spider_test.items import TestItem1, TestItem2
 
 class QuotesToscrapeComSpider(scrapy.Spider):
     name = "quotes.toscrape.com"
@@ -17,3 +17,14 @@ class QuotesToscrapeComSpider(scrapy.Spider):
                 ),
                 "tags": quote.css(".tag *::text").getall(),
             }
+
+
+        #if you are going for multple items and need to test individually
+        # x = TestItem1()
+        # y = TestItem2()
+        # for quote in response.css(".quote"):
+        #     x['quote'] = quote.css(".text::text").get()
+        #     y['author'] = quote.css(".author::text").get()
+
+        #     yield x
+        #     yield y

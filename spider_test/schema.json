@@ -1,6 +1,6 @@
 {
     "quote": {"type": "string", "required": true},
-    "author": {"type": "string", "required": true},
+    "author": {"type": "string"},
     "author_url": {"type": "string"},
     "tags": {"type": "list"}
 }
