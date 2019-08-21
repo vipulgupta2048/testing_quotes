@@ -14,6 +14,7 @@ class TestItem1(scrapy.Item):
     quote = scrapy.Field()
     pass
 
+
 class TestItem2(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()

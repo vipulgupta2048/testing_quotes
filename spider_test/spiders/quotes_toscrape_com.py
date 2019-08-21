@@ -2,6 +2,7 @@
 import scrapy
 from spider_test.items import TestItem1, TestItem2
 
+
 class QuotesToscrapeComSpider(scrapy.Spider):
     name = "quotes.toscrape.com"
     allowed_domains = ["quotes.toscrape.com"]
@@ -17,7 +18,6 @@ class QuotesToscrapeComSpider(scrapy.Spider):
                 ),
                 "tags": quote.css(".tag *::text").getall(),
             }
-
 
         # if you are going for multple items and need to test individually
         # x = TestItem1()
