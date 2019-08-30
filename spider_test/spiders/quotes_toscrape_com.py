@@ -12,11 +12,11 @@ class QuotesToscrapeComSpider(scrapy.Spider):
         for quote in response.css(".quote"):
             yield {
                 "quote": quote.css(".text::text").get(),
-                "author": quote.css(".author::text").get(),
-                "author_url": response.urljoin(
-                    quote.css(".author a::attr(href)").get()
-                ),
-                "tags": quote.css(".tag *::text").getall(),
+                # "author": quote.css(".author::text").get(),
+                # "author_url": response.urljoin(
+                #     quote.css(".author a::attr(href)").get()
+                # ),
+                # "tags": quote.css(".tag *::text").getall(),
             }
 
         # if you are going for multple items and need to test individually

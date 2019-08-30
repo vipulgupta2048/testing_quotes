@@ -34,6 +34,12 @@ SPIDERMON_ENABLED = True
 #     "tags": {"type": "list"}
 # }]
 
+# multiple schemas are defined, an item is considered valid if it passes any of these schemas
+SPIDERMON_VALIDATION_CERBERUS = [
+    {"quote": {"type": "string", "required": True}},
+    {"quote": {"type": "int", "required": False}}
+]
+
 # Adds errors to items, check output
 SPIDERMON_VALIDATION_ADD_ERRORS_TO_ITEMS = True
 
