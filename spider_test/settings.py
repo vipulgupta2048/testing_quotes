@@ -12,15 +12,21 @@ ITEM_PIPELINES = {"spidermon.contrib.scrapy.pipelines.ItemValidationPipeline": 8
 
 SPIDERMON_ENABLED = True
 
-# Ways to add Cerberus schemas
+# Ways to add Cerberus schemas for testing Cerberus Validation
 
+# 2 items from Scrapy, 2 seperate schemas
 # SPIDERMON_VALIDATION_CERBERUS = {
 #     TestItem1:'/home/vipulgupta2048/quotes/spider_test/schema.json',
 #     TestItem2:'/home/vipulgupta2048/quotes/spider_test/quotes.json'
 #     }
 
+# Absolute path to schema
 # SPIDERMON_VALIDATION_CERBERUS = ['/home/vipulgupta2048/quotes/spider_test/schema.json']
+
+# Prasing schemas from URL
 # SPIDERMON_VALIDATION_CERBERUS = ['https://api.myjson.com/bins/gmdgl']
+
+# Providing scheama directly
 # SPIDERMON_VALIDATION_CERBERUS = [{
 #     "quote": {"type": "string", "required": True},
 #     "author": {"type": "number", "required": True},
@@ -28,9 +34,10 @@ SPIDERMON_ENABLED = True
 #     "tags": {"type": "list"}
 # }]
 
-# SPIDERMON_VALIDATION_ADD_ERRORS_TO_ITEMS = True
+# Adds errors to items, check output
+SPIDERMON_VALIDATION_ADD_ERRORS_TO_ITEMS = True
 
-
+# Testing Schematics
 # SPIDERMON_VALIDATION_MODELS = (
 #     'placement.validators.Product',
 # )
@@ -39,4 +46,5 @@ SPIDERMON_ENABLED = True
 #     'placement.monitors.SpiderCloseMonitorSuite',
 # )
 
+# Testing JSONSchema
 # SPIDERMON_VALIDATION_SCHEMAS = ['/home/vipulgupta2048/quotes/spider_test/quotes.json']
