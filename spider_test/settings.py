@@ -21,7 +21,7 @@ SPIDERMON_ENABLED = True
 #     }
 
 # Absolute path to schema
-# SPIDERMON_VALIDATION_CERBERUS = ['/home/vipulgupta2048/quotes/spider_test/schema.json']
+# SPIDERMON_VALIDATION_CERBERUS = ['/home/vipulgupta2048/quotes/spider_test/schema.t json']
 
 # Prasing schemas from URL
 # SPIDERMON_VALIDATION_CERBERUS = ['https://api.myjson.com/bins/gmdgl']
@@ -35,10 +35,10 @@ SPIDERMON_ENABLED = True
 # }]
 
 # multiple schemas are defined, an item is considered valid if it passes any of these schemas
-SPIDERMON_VALIDATION_CERBERUS = [
-    {"quote": {"type": "string", "required": True}},
-    {"quote": {"type": "int", "required": False}}
-]
+# SPIDERMON_VALIDATION_CERBERUS = [
+#     {"quote": {"type": "integer", "required": True}},
+#     {"quote": {"type": "number", "required": True}}
+# ]
 
 # Adds errors to items, check output
 SPIDERMON_VALIDATION_ADD_ERRORS_TO_ITEMS = True
